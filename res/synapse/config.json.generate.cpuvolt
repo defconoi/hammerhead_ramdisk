@@ -12,7 +12,7 @@ cat << CTAG
 						unit:" uV",
 						min:-300000,
 						max:300000,
-						step:25000,
+						step:5000,
 						notify:[
 							{
 								on:APPLY,
@@ -61,7 +61,7 @@ cat << CTAG
 						unit:" mV",
 						min:-300,
 						max:300,
-						step:25,
+						step:5,
 						notify:[
 							{
 								on:APPLY,
@@ -127,7 +127,7 @@ cat << CTAG
 							unit:" uV",
 							min:0,
 							max:300000,
-							step:25000,
+							step:5000,
 						default:'$LUV',
 						action:"generic /sys/module/acpuclock_krait/parameters/lower_uV",
 					}},'
@@ -140,7 +140,7 @@ cat << CTAG
 							unit:" uV",
 							min:0,
 							max:300000,
-							step:25000,
+							step:5000,
 						default:'$HUV',
 						action:"generic /sys/module/acpuclock_krait/parameters/higher_uV",
 					}},'
