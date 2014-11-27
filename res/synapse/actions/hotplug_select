@@ -36,9 +36,10 @@ if [[ ! -z $2 ]]; then
 	else
 			echo "0" > /sys/devices/system/cpu/cpu0/rq-stats/hotplug_enable;
 			echo "0" > /sys/kernel/intelli_plug/intelli_plug_active;
+			echo "0" > /sys/module/msm_hotplug/msm_enabled;
 			echo "0" > /sys/kernel/alucard_hotplug/hotplug_enable;
 			$BB sleep 1;
-			echo "1" > /sys/module/msm_hotplug/msm_enabled;
+			echo "1" > /sys/kernel/intelli_plug/intelli_plug_active;
 	fi
 fi
 
@@ -54,6 +55,7 @@ else
 	echo "0" > /sys/devices/system/cpu/cpu0/rq-stats/hotplug_enable;
 	echo "0" > /sys/kernel/intelli_plug/intelli_plug_active;
 	echo "0" > /sys/kernel/alucard_hotplug/hotplug_enable;
-	echo "1" > /sys/module/msm_hotplug/msm_enabled;
-	echo "MSM_Hotplug"
+	echo "0" > /sys/module/msm_hotplug/msm_enabled;
+	echo "1" > /sys/kernel/intelli_plug/intelli_plug_active;
+	echo "Intelli_Hotplug"
 fi
